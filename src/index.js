@@ -30,7 +30,7 @@ app.get("/contacts", (req, res) => {
 app.get("/certifications", (req, res) => {
   res.render("certifications");
 });
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
 /* app.set("views", path.join(__dirname, "views"));
 
