@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("partials/head")%>
+  </head>
+  <body class="bg-primary text-gray-300">
+    <%- include("partials/sidebar")%>
+    <main class="main"><%- include("partials/header") %></main>
+    <%- include("partials/footer")%> <%- include("partials/tabbar")%>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+      integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      /* TIPING  */
+
+      var tipingEffect = new Typed(".multitext", {
+        strings: ["Frontend Developer", "Web Programmer", "Web Designer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true,
+      });
+    </script>
+
+    <%- include("partials/scripts")%>
+  </body>
+</html>

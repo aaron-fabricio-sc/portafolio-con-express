@@ -1,0 +1,359 @@
+
+
+body{
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+
+}
+
+
+.button{
+    box-shadow: 0 0 20px black;
+    transition: 0.5s;
+}
+
+
+
+.container{
+ width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.banner{
+    height: 200px;
+    object-fit: contain;
+}
+
+.container-abilities{
+    display: flex;
+    justify-content: space-evenly;
+    
+    box-sizing: border-box;
+}
+
+
+.ability-card{
+    
+    box-shadow: 0 0 5px purple;
+    max-width: 150px;
+width: 100%;
+    border-radius: 10px;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.ability-card figure img{
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    object-fit: contain;
+}
+.ability-card figcaption{
+    font-size: 12px;
+    text-align: center;
+}
+
+/* services */
+
+
+.container-services{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.ability-card-services{
+    width: 100%;
+    margin: 10px;
+    max-width: 300px;
+    transition: 0.7s;
+}
+.ability-card-services:hover{
+    
+    background: #560b9d;
+    box-shadow: 0 0 5px cyan;
+}
+
+
+
+
+
+/* contacts */
+
+
+.container-input{
+    width: 100%;
+}
+.container-input input{
+ 
+    background: rgba(0,0,0,.3);
+    border-radius: 8px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    transition: 0.5s;
+    border-bottom: 2px solid purple;
+    
+}
+.container-input textarea{
+  
+     background: rgba(0,0,0,.3);
+    border-radius: 8px;
+    margin: 5px 0;
+    padding: 20px;
+    transition: 0.5s;
+
+    border-bottom: 2px solid purple;
+}
+
+.container-input textarea:hover{
+    border-bottom: 2px solid cyan;
+    
+}
+
+.container-input input:hover{
+    border-bottom: 2px solid cyan;
+
+}
+.container-input input:focus{
+    outline:  none;
+
+}
+.container-input textarea:focus{
+    outline:  none;
+}
+
+.button-submit{
+    padding: 10px 20px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(148, 15, 148);
+    
+
+    box-shadow: 0 0 10px black;
+    font-weight: 500;
+
+}
+
+
+
+
+.container-icons-services a{
+    margin: 5px 8px;
+    font-size: 30px;
+}
+.service-icon {
+    font-size: 25px;
+}
+.linkedin:hover{
+    
+    color:#0e76a8;
+}
+
+.github:hover{
+   
+    
+    color:#171515;
+}
+
+.twitter:hover{
+color:#00acee;
+    
+}
+
+.whatsapp:hover{
+    color: #25d366;
+
+}
+
+/* -------------------- */
+
+/* certifications */
+
+
+.container-certications{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.container-certications figure img{
+    margin: 10px 0;
+    
+    width: 100%;
+    max-width: 320px;
+    transition: 0.8s;
+    box-shadow: 0 0 5px cyan;
+}
+
+.container-certications figure img:hover{
+    transform: scale(1.4);
+    box-shadow: 0 0 10px cyan;
+
+}
+
+
+
+
+@media (min-width:768px){
+.container-abilities{
+    
+    grid-template-columns: repeat(4 ,1fr);
+    gap: 15px;
+    
+
+}
+
+
+
+.ability-card figure img{
+    width: 70px;
+    height: 70px;
+   
+}
+.ability-card figcaption{
+    font-size: 16px;
+   
+}
+
+
+    .formulario{
+        display: grid;
+        grid-template-columns: repeat(2 ,1fr);
+        grid-template-rows: auto auto auto auto;
+       
+        grid-template-areas: 
+            "name email"
+            "subject subject"
+            "message message"
+            "button button"
+        ;
+        padding: 20px 50px;
+        gap:10px
+    }
+
+    .formulario .name-input{
+       grid-area: name;
+    }
+
+    .formulario .message-input{
+        
+        grid-area: message;
+    }
+    .formulario .subject-input{
+        grid-area: subject;
+    }
+    .formulario .button-input{
+        grid-area: button;
+    }
+
+    .container-input input{
+ 
+    
+    
+    padding: 10px 20px;
+    }
+    .button-submit{
+    padding: 15px 30px;
+    font-size: 18px;
+
+}
+
+
+}
+
+
+@media (min-width:1000px){
+    .main{
+        
+        width: calc(100% - 150px);
+        margin-left: 100px;
+        padding-bottom: 100px;
+        
+        
+        
+    }
+
+    .sidebar.active ~ .main{
+       
+
+        padding-left: 200px;
+        
+        
+    }
+    
+    header{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 85vh;
+        align-content: center;
+
+    }
+
+     
+
+    header .container-banner .banner{
+        height: 100%;
+    }
+
+    header .header-info h3{
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    header .header-info h1{
+        font-size: 22px;
+    }
+
+    header .header-info .multitext{
+        font-size: 30px;
+    }
+
+    header .header-info .icons{
+        font-size: 20px;
+    }
+    
+    header .container-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        
+    }
+    header .container-buttons a{
+        width: 150px;
+        height: 50px;
+        margin: 10px 0;
+        text-align: right;
+    }
+
+
+
+
+.container-input input{
+ 
+   
+    padding: 10px 20px;
+    font-size: 20px;
+    
+}
+.container-input textarea{
+  
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+
+.button-submit{
+    padding: 15px 40px;
+   font-size: 24px;
+
+}
+}

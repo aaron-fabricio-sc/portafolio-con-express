@@ -1,0 +1,219 @@
+.sidebar{
+        position: fixed  ; 
+    display: none;
+
+    z-index: 1000;
+
+}
+
+
+@media (min-width:1000px){
+    .sidebar{
+
+        display: block;
+        
+        left: 0;
+        
+        
+        background: rgb(1, 8, 34);
+        width: 70px ;
+        
+        padding: 8px ;
+            height: 100vh;
+        transition: all 0.5s ease;
+
+    }
+      .sidebar.active{
+        width: 270px;
+      }
+    .sidebar .logo-content{
+        padding: 10px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      
+       
+    }
+
+    .sidebar .logo-content a{
+        
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s ease;
+    }
+
+      .sidebar.active .logo-content a{
+        
+        opacity: 1;
+        pointer-events: none;
+    }
+    .sidebar .logo-content .button-menu{
+        position: absolute;
+         right: 30%;
+        top:10px;
+
+        
+        font-size: 36px;
+        height: 50px;
+    }
+
+    .sidebar.active .logo-content .button-menu{
+        right: 10%;
+       
+    }
+
+    
+
+    .sidebar ul{
+        margin-top: 20px;
+    }
+    .sidebar ul li{
+        position: relative;
+        height: 60px;
+        width: 100%;
+       
+        line-height: 50px;
+        
+    }
+ 
+    /* tooltip */
+    .sidebar ul li .tooltip{
+
+        position: absolute;
+        height: 50px;
+        top: 0;
+        left: 122px;
+        transform: translate(-50%, -50%);
+        border-radius: 6px;
+        height: 35px;
+        width: 122px;
+        background: white;
+        line-height: 35px;
+        color: black;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        transition: 0s;
+
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .sidebar.active ul li .tooltip{
+        display: none;
+    }
+
+    .sidebar ul li:hover .tooltip{
+        transition: all 0.5s ease;
+        opacity: 1;
+        top: 50%;
+    }
+
+
+    /* -------------- */
+   .sidebar ul li a {
+      
+    
+    display: flex;
+    align-items: center;
+    width: 90%;
+    padding-left: 10px;
+    transition: 0.7s;
+    white-space:nowrap;
+   }
+
+   .sidebar ul li a:hover {
+    border-radius: 8px;
+    background-color: white;
+    color: rgb(1, 8, 34);
+   }
+
+
+    .sidebar ul li a i{
+    
+        font-size: 20px;
+        margin-right: 20px;
+        
+      
+        text-align: center;
+    }
+
+    /* el nombre lo de los links  */
+
+.sidebar .link-name{
+    
+        opacity: 0;
+        pointer-events: auto;
+        transition: 0.5s ease;
+    }
+
+    .sidebar.active ul li a .link-name{
+    
+        opacity: 1;
+        pointer-events: auto;
+        
+    }
+    /* ------------ */
+    .sidebar ul li span{
+        font-size: 18px;
+        
+        font-weight: 400;
+        text-align: center;
+    }
+
+
+    /* profile content */
+
+    .sidebar .profile-content{
+        position: absolute;
+        display: flex;
+        justify-content: space-evenly;
+       align-items: center  ;
+        bottom: 0;
+        left: 0;
+        height: 120px;
+        width: 100%;
+        
+
+    }
+    .sidebar .profile-content .text-profile{
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s ease;
+    }
+   
+    
+    .sidebar .profile-content .corazon{
+        position: absolute;
+        animation: latido 1.5s  infinite ;
+        transition: 0.5s ease;
+       
+    }
+
+    .sidebar.active .profile-content .text-profile{
+        opacity: 1;
+        pointer-events: none;
+        
+    }
+   
+    
+    .sidebar.active .profile-content .corazon{
+        position: initial;
+        
+       
+    }
+
+
+
+    @keyframes latido {
+        0% {
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.5);
+        }
+    }
+
+/* ----------------- */
+    
+
+    
+}
