@@ -30,6 +30,10 @@ app.get("/contacts", (req, res) => {
 app.get("/certifications", (req, res) => {
   res.render("certifications");
 });
+
+app.get("/portafolio", (req, res) => {
+  res.render("portafolio");
+});
 app.listen(process.env.PORT || 3000);
 
 /* app.set("views", path.join(__dirname, "views"));
