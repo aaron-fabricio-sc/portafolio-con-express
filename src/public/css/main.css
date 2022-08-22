@@ -35,7 +35,8 @@ body{
 .container-abilities{
     display: flex;
     justify-content: space-evenly;
-    
+
+    flex-wrap: wrap;
     box-sizing: border-box;
 }
 
@@ -43,13 +44,15 @@ body{
 .ability-card{
     
     box-shadow: 0 0 5px purple;
+    width: 80%;
     max-width: 150px;
-    width: 100%;
+    height: auto;
     border-radius: 10px;
     margin: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     padding: 20px 10px;
     transition: 0.3s ease;
 }
@@ -61,8 +64,8 @@ body{
 }
 
 .ability-card figure img{
+    
     width: 40px;
-    height: 40px;
     margin: auto;
     object-fit: contain;
 }
